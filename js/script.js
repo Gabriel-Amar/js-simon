@@ -46,12 +46,16 @@ let timer = function(num) {
     time.innerHTML = num;
     return setTimeout(() => {timer(--num)}, 1000)
 }
-timer(3);
+timer(4);
 
-function azione(){
+let rimuoviNumeri = setTimeout(function(){
     time.innerHTML = ""
     numeri.innerHTML = ""
-    numeriInseriti = []
+}, 4000);
+
+numeriInseriti = []
+
+function azione(){
     for(let i = 0; i < 5; i++){
         numeriInseriti.push(parseInt(prompt("Inserisci i 5 numeri che hai visto")));
     }
@@ -60,9 +64,12 @@ function azione(){
 
 let numeriIndovinati = []
 
-
-
-
+// for(let i = 1; i < numeriGenerati.length; i++){
+//     if(numeriGenerati.includes(numeriInseriti)){
+//         numeriInseriti.push(numeriIndovinati)
+//         console.log(numeriIndovinati)
+//     }
+// }
 
 
 

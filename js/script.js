@@ -60,17 +60,22 @@ function azione(){
         numeriInseriti.push(parseInt(prompt("Inserisci i 5 numeri che hai visto")));
     }
     console.log(numeriInseriti)
+    for(let i = 0; i < numeriGenerati.length; i++){
+        if(numeriGenerati[i] === numeriInseriti[i]){
+            let messaggio = document.getElementById("vittoria").innerHTML = ("Hai vinto!")
+        }else{
+            let messaggio2 = document.getElementById("perso").innerHTML = ("Hai perso!")
+        }
+    }
 }
 
 let numeriIndovinati = []
 
-// for(let i = 1; i < numeriGenerati.length; i++){
-//     if(numeriGenerati.includes(numeriInseriti)){
-//         numeriInseriti.push(numeriIndovinati)
-//         console.log(numeriIndovinati)
-//     }
-// }
 
+// console.log(numeriInseriti)
+// function checkNum(arr1, arr2){
+//     if(arr1 )
+// }
 
 
 

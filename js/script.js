@@ -27,7 +27,10 @@ function getRandom(min, max){
 let numeriGenerati = [];
 
 while(numeriGenerati.length < 5){
-    numeriGenerati.push(getRandom(1, 100));
+    let num = getRandom(1, 100);
+    if(!numeriGenerati.includes(num)){
+        numeriGenerati.push(num);
+    }
 }
 
 let numeriSeparati = numeriGenerati.join('-');
@@ -41,7 +44,7 @@ let time = document.getElementById('divTempo');
 let timer = function(num) {
     if(num === 0) {
         azione()
-        return;
+        return
     }
     time.innerHTML = num;
     return setTimeout(() => {timer(--num)}, 1000)
@@ -54,6 +57,7 @@ let rimuoviNumeri = setTimeout(function(){
 }, 4000);
 
 numeriInseriti = []
+// console.log(numeriInseriti)
 
 function azione(){
     for(let i = 0; i < 5; i++){
@@ -72,10 +76,7 @@ function azione(){
 let numeriIndovinati = []
 
 
-// console.log(numeriInseriti)
-// function checkNum(arr1, arr2){
-//     if(arr1 )
-// }
+
 
 
 
